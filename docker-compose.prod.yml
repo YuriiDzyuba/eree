@@ -67,7 +67,7 @@ services:
 #      MONGO_INITDB_ROOT_PASSWORD: ${APP_MONGODB_ADMINPASSWORD}
 #      MONGO_INITDB_DATABASE: ${MONGODB_INITDB_DATABASE}
     volumes:
-      - ./mongo_db:/data/db
+      - mongo_db:/data/db
       - ./mongo/init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     networks:
       - lesson-prod-network
